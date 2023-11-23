@@ -1,6 +1,6 @@
 FROM openjdk:11
 
-COPY target/*.jar /app.jar
+COPY *.jar /app.jar
 
 CMD ["--server.port=8081"]
 
