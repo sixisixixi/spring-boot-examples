@@ -9,6 +9,6 @@ public class TestServer {
     @ResponseBody
     @RequestMapping("test")
     public String test(){
-        return "hello springboot";
+        return "hello springboot------test branches";
     }
 }
