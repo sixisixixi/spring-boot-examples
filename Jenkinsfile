@@ -16,11 +16,11 @@ pipeline {
         }
         stage('publish project') {
             steps {
-                sh '''cd /Users/ts-junyao.luo/data/project
-                cp ${WORKSPACE}/springboot/target/*.jar  /Users/ts-junyao.luo/data/project/springboot.jar
-                cp ${WORKSPACE}/springboot/Dockerfile  /Users/ts-junyao.luo/data/project
-                docker build -t test -f Dockerfile .
-                docker run -d -p 8888:8081 --name springboot test'''
+                sh '''cd /Users/ts-junyao.luo/data/project/multi-branch
+                cp ${WORKSPACE}/springboot/target/*.jar  /Users/ts-junyao.luo/data/project/multi-branch/springboot.jar
+                cp ${WORKSPACE}/springboot/Dockerfile  /Users/ts-junyao.luo/data/project/multi-branch
+                docker build -t test1 -f Dockerfile .
+                docker run -d -p 8888:8081 --name springboot1 test1'''
                 echo 'publish project success'
             }
         }
